@@ -83,6 +83,38 @@ Nmap successfully identified technologies and service versions running on the ta
 The scan revealed several externally accessible services, including FTP, HTTP, HTTPS, and HTTP Proxy services. Each exposed service expands the organization's attack surface. If any of these services are misconfigured, unpatched, or improperly secured, they may provide attackers with potential entry points into the environment.
 
 ---
+# Phase 03 – Vulnerabilities Identified Using DevTool
+
+after inspecting the main network channel i found 
+Content-Security-Policy
+<img width="751" height="514" alt="image" src="https://github.com/user-attachments/assets/a0613f45-58b1-4312-8e54-4f0e3f7d02a4" />
+
+X-Frame-Options
+<img width="211" height="19" alt="image" src="https://github.com/user-attachments/assets/88764874-0da7-446b-8699-ed9af581edb6" />
+
+X-Content-Type-Options
+<img width="171" height="15" alt="image" src="https://github.com/user-attachments/assets/cfdfafea-e8cb-4398-8003-77a28de0e7e6" />
+
+Strict-Transport-Security
+<img width="601" height="40" alt="image" src="https://github.com/user-attachments/assets/d57983c4-8d85-4d82-960f-baaed6c2a42e" />
+
+Referrer-Policy 
+<img width="189" height="22" alt="image" src="https://github.com/user-attachments/assets/e63ec18a-d24a-4a50-a4e3-1fa5fb14d901" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Conclusion
 
