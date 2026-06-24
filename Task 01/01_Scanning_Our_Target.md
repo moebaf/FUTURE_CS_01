@@ -22,7 +22,7 @@ To perform web application security testing, I installed OWASP ZAP on my Kali Li
 
 After launching OWASP ZAP, I configured the application to Attack Mode and entered the target URL:
 
-`https://owasp.org/www-project-juice-shop/`
+`https://demo.owasp-juice.shop/`
 
 I then initiated an automated scan to identify potential security vulnerabilities and misconfigurations within the target application.
 
