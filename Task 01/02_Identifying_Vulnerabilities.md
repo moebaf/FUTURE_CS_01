@@ -83,34 +83,56 @@ Nmap successfully identified technologies and service versions running on the ta
 The scan revealed several externally accessible services, including FTP, HTTP, HTTPS, and HTTP Proxy services. Each exposed service expands the organization's attack surface. If any of these services are misconfigured, unpatched, or improperly secured, they may provide attackers with potential entry points into the environment.
 
 ---
-# Phase 03 – Vulnerabilities Identified Using DevTool
+# Phase 03 – Browser Developer Tools Findings
 
-after inspecting the main network channel i found 
-Content-Security-Policy
+## Finding 1 – CSP script-src unsafe-eval Confirmed
+
+### Description
+
+Using Browser Developer Tools, I manually inspected the Content Security Policy (CSP) response header returned by the server. During this review, I confirmed that the application's `script-src` directive contains the `unsafe-eval` keyword.
+
+The `unsafe-eval` directive permits the execution of dynamically generated JavaScript code through functions such as `eval()`, `setTimeout()`, and `setInterval()` when supplied with string arguments. This weakens the protection offered by Content Security Policy and may increase the risk of Cross-Site Scripting (XSS) attacks if malicious code is introduced into the application.
+
+This finding validates the issue previously identified during the OWASP ZAP scan.
+
+### Evidence
+
 <img width="751" height="514" alt="image" src="https://github.com/user-attachments/assets/a0613f45-58b1-4312-8e54-4f0e3f7d02a4" />
 
-X-Frame-Options
+---
+
+## Observation – Security Headers Successfully Implemented
+
+### Description
+
+During the Browser Developer Tools analysis, I observed several security headers that were properly configured by the application, including:
+
+* X-Frame-Options: SAMEORIGIN
+* X-Content-Type-Options: nosniff
+* Strict-Transport-Security
+* Referrer-Policy
+
+The presence of these headers helps strengthen browser security by reducing risks associated with clickjacking, MIME-type confusion attacks, insecure transport protocols, and unnecessary referrer information disclosure.
+
+Although these are not vulnerabilities, they demonstrate that the application has implemented several important security controls.
+
+### Evidence
+
+#### X-Frame-Options
+
 <img width="211" height="19" alt="image" src="https://github.com/user-attachments/assets/88764874-0da7-446b-8699-ed9af581edb6" />
 
-X-Content-Type-Options
+#### X-Content-Type-Options
+
 <img width="171" height="15" alt="image" src="https://github.com/user-attachments/assets/cfdfafea-e8cb-4398-8003-77a28de0e7e6" />
 
-Strict-Transport-Security
+#### Strict-Transport-Security
+
 <img width="601" height="40" alt="image" src="https://github.com/user-attachments/assets/d57983c4-8d85-4d82-960f-baaed6c2a42e" />
 
-Referrer-Policy 
+#### Referrer-Policy
+
 <img width="189" height="22" alt="image" src="https://github.com/user-attachments/assets/e63ec18a-d24a-4a50-a4e3-1fa5fb14d901" />
-
-
-
-
-
-
-
-
-
-
-
 
 
 
