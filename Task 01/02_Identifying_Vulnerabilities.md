@@ -76,7 +76,7 @@ Nmap successfully identified technologies and service versions running on the ta
 
 ---
 
-## Vulnerability 3 – Multiple Exposed Services Increasing Attack Surface
+## Security Observation 3 – Multiple Exposed Services Increasing Attack Surface
 
 ### Description
 
