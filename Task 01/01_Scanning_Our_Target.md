@@ -15,3 +15,13 @@ It helps security professionals discover and assess common security weaknesses b
 
 <img width="722" height="310" alt="image" src="https://github.com/user-attachments/assets/5f98cfb0-e72c-4fe8-8f13-7c2835cba7e1" />
 
+## step 2 -scann the website and generate a report
+
+next i opened owaspzap and set it to attack mode i pasted my url which is(https://owasp.org/www-project-juice-shop/) and lunched an auto matic attack
+and as you can see the attack started 
+
+<img width="1919" height="924" alt="image" src="https://github.com/user-attachments/assets/8da77cc5-fca1-4bea-941f-2f70cd05561a" />
+
+after the scan is compelte we generate a report and save it in the format we want  i have kep my report 
+
+
