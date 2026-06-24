@@ -7,6 +7,9 @@
 For this assessment, I selected OWASP Juice Shop as my target application. OWASP Juice Shop is an intentionally vulnerable web application developed by OWASP for security training and penetration testing practice. I chose this application because it provides a safe and realistic environment for identifying common web application vulnerabilities and improving my vulnerability assessment skills.
 
 ---
+## Executive Summary
+
+A vulnerability assessment was conducted against the OWASP Juice Shop application using OWASP ZAP, Nmap, and Browser Developer Tools. Several security issues were identified, including CSP weaknesses, cross-domain configuration concerns, and information disclosure through service enumeration. One finding was classified as High Risk, three as Medium Risk, and two as Low Risk. Recommendations have been provided to improve the application's security posture.
 
 # Phase 01 – Scanning the Target Using OWASP ZAP
 
