@@ -12,9 +12,17 @@ the format remains the same ohase one is vulnarabilities found in owasp,phase 02
 ## Vulnerability 1 – Content Security Policy (CSP) Header Not Set
 
 ### Description
-I identified that the website does not implement a Content Security Policy (CSP) header.
-CSP helps prevent attacks such as Cross-Site Scripting (XSS) by controlling which resources can be loaded and executed by the browser.
+During the OWASP ZAP scan, I identified that the target website did not have a Content Security Policy (CSP) header configured. A CSP header is an important security mechanism that helps prevent attacks such as Cross-Site Scripting (XSS) by controlling which resources can be loaded and executed by a user's browser. Without a properly configured CSP, malicious scripts may be executed if an attacker is able to inject content into the application.
 
 ### Evidence
+<img width="680" height="384" alt="image" src="https://github.com/user-attachments/assets/5888e56b-9310-4853-bae0-f91d8841b4c2" />
+
+
+
+
+
+
+
+
 
 
