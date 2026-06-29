@@ -38,12 +38,8 @@ FUTURE_CS_01
 │   └── Business_Impact.md
 │
 ├── Remediation Recommendations
-│   └── Remediation_Recommendations.md
-│
-└── Evidence
-    ├── OWASP ZAP Screenshots
-    ├── Nmap Scan
-    └── Browser Developer Tools
+    └── Remediation_Recommendations.md
+
 ```
 
 ---
